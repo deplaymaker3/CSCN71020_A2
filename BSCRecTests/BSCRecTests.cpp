@@ -13,7 +13,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace BSCRecTests
 {
-	TEST_CLASS(BSCRecTests)
+	TEST_CLASS(RectangleTests)
 	{
 	public:
 		
@@ -30,5 +30,20 @@ namespace BSCRecTests
 			// Assert
 			Assert::AreEqual(expectedPerimeter, actual);
 		}
+
+		// Test for getArea function
+		TEST_METHOD(SetLength_ValidLow)
+		{
+			// Arrange
+			int input = 1;
+			int expected = 1;
+
+			// Act 
+			int actual = setLength(input);
+
+			// Assert
+			Assert::AreEqual(expected, actual);
+		}
+
 	};
 }
